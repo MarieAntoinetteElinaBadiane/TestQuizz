@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Questions</title>
+</head>
+<body>
+  <div class="container" style="width: 750px; margin: 0 auto;">
+    <div class="center">
+    <div class="row">
+        <div class="col-md-6 mx-auto">
+          <div class="card rounded-0">
+
+            <div class="card-header">
+              <h3 class="mb-0">Quizz</h3>
+            </div>
+
+            <div class="card-body">
+               Question1
+               <form [formGroup]="part1"  >
+                   <label for=""><h5>Choisir un nombre entre 1 et 9</h5></label>
+                   <input type="number" class="form-control" formControlName="question1" placeholder=" Entrer le nombre" value=""/>
+                <button (click)="good1(part1.value)" type="button" class="btn btn-success float-right ">Suivant</button>
+              </form>
+            </div>
+
+              <div class="card-body" >
+                Question2
+                  <div *ngIf="quest2" >
+                   <label for=""><h5>As-tu déjà fêté ton Anniverssaire</h5></label>
+                   <button (click)="oui1()" type="button" class="btn btn-success float-right ">Oui</button>
+                   <button (click)="non1()"type="button" class="btn btn-danger float-left ">Non</button>
+                   </div>
+              </div>
+
+                  <div>
+                      Question3
+                      <div *ngIf="quest3" >
+                      <form [formGroup]="part3" >
+                        <label for=""><h5>Entrer votre année de ta naissance</h5></label>
+                        <input type="number" class="form-control" formControlName="annee" placeholder=" Entrer le nombre" value=""/>
+                      <button (click)="good2(part3.value)" type="button" class="btn btn-success float-right ">Suivant</button>
+                    </form>
+                    </div>
+                  </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      </div>
+  </body>
+  </html>
+

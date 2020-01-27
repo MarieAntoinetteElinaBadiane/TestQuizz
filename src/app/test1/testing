@@ -1,0 +1,5 @@
+ Swal.fire(
+          'Succés',
+          'Votre chiffre et age sont + ',
+          'success'
+         );
